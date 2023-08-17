@@ -25,8 +25,13 @@ class FlowerTypeWidget extends StatelessWidget {
             padding: const EdgeInsets.only(right: 10),
             child: GestureDetector(
               onTap: () {
-                cubit.catIndex = index;
-                cubit.changecurrentbool(true);
+                if (index == cubit.catIndex) {
+                  cubit.changecurrentbool(!cubit.isCat);
+                  cubit.catIndex = -1;
+                } else {
+                  cubit.catIndex = index;
+                  cubit.changecurrentbool(true);
+                }
               },
               child: CatItem(
                 icon: '${catItem[index]['icon']}',

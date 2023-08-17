@@ -14,7 +14,7 @@ class TopRatedWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
       separatorBuilder: (context, index) => const SizedBox(
-        width: 30,
+        width: 10,
       ),
       physics: const BouncingScrollPhysics(),
       scrollDirection: Axis.horizontal,
@@ -24,7 +24,6 @@ class TopRatedWidget extends StatelessWidget {
         title: FlowerModel.topRatedList[index].title,
         price: FlowerModel.topRatedList[index].price,
         onPressed: () {
-          
           cubit.cartList(
             FlowerModel.topRatedList,
             index,

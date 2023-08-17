@@ -51,7 +51,7 @@ class CatItemBuild extends StatelessWidget {
             ),
             itemBuilder: (context, index) {
               return Padding(
-                padding: const EdgeInsets.all(26.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Container(
                   width: 115,
                   height: 250,
@@ -79,7 +79,7 @@ class CatItemBuild extends StatelessWidget {
                             ),
                           ),
                           IconButton(
-                              onPressed: () =>cubit.faver(list, index),
+                              onPressed: () => cubit.faver(list, index),
                               icon: Icon(
                                 list[index].isFavorated
                                     ? Icons.favorite

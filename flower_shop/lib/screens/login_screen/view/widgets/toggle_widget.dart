@@ -37,6 +37,7 @@ class ToggleWidget extends StatelessWidget {
       radiusStyle: true,
       onToggle: (index) {
         cubit.changecurrentSwitch(posit: index!);
+        print(index);
       },
     );
   }

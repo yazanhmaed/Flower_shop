@@ -67,7 +67,7 @@ class FavoriteScreen extends StatelessWidget {
               ),
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.all(26.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: Container(
                     width: 115,
                     height: 250,
@@ -93,7 +93,7 @@ class FavoriteScreen extends StatelessWidget {
                               ),
                             ),
                             IconButton(
-                                onPressed: () =>cubit.favList(index),
+                                onPressed: () => cubit.favList(index),
                                 icon: const Icon(
                                   Icons.favorite,
                                   color: Colors.red,

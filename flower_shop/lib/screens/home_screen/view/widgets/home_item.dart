@@ -33,7 +33,10 @@ class HomeItem extends StatelessWidget {
           const SizedBox(
             height: 4,
           ),
-          Text(title),
+          Text(
+            title,
+            overflow: TextOverflow.ellipsis,
+          ),
           ElevatedButton(
             onPressed: onPressed,
             style: ButtonStyle(

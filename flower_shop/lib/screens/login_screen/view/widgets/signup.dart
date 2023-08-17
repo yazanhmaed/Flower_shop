@@ -14,13 +14,14 @@ class SignUpBuilder extends StatelessWidget {
     this.onPressed,
     this.onPressedobscureText,
     required this.obscureText,
-    required this.positive,
+    required this.positive, this.onTap,
   }) : super(key: key);
   final TextEditingController nameController;
   final TextEditingController emailController;
   final TextEditingController passwordController;
   final Function()? onPressed;
   final Function()? onPressedobscureText;
+  final Function()? onTap ;
   final bool obscureText;
 
   final int positive;
@@ -96,7 +97,7 @@ class SignUpBuilder extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 25, vertical: 12),
                         child: Image.asset(
-                          'assets/images/google.png',
+                          'assets/images/facebool_logo.png',
                         ),
                       ),
                       const Text('Sign Up with Facebook')
@@ -138,12 +139,15 @@ class SignUpBuilder extends StatelessWidget {
                         fontSize: 12,
                       ),
                     ),
-                    Text('Login now',
-                        style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            decorationColor: ColorManager.primary,
-                            color: ColorManager.primary,
-                            fontSize: 14)),
+                    GestureDetector(
+                      onTap: onTap,
+                      child: Text('Login now',
+                          style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              decorationColor: ColorManager.primary,
+                              color: ColorManager.primary,
+                              fontSize: 14)),
+                    ),
                   ],
                 ),
                 const SizedBox(
@@ -155,7 +159,7 @@ class SignUpBuilder extends StatelessWidget {
                   child: ButtomCustom(
                     text: 'Sign Up',
                     color: ColorManager.primary,
-                    onPressed: () {},
+                    onPressed: onPressed,
                   ),
                 )
               ],

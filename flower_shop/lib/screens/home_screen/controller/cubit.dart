@@ -22,6 +22,11 @@ class HomeCubit extends Cubit<HomeStates> {
     slider = sli;
     emit(HomeChangeSliderState());
   }
+  int imageSlider = 0;
+  void changeimageSlider(int sli) {
+    imageSlider = sli;
+    emit(HomeChangeimageSliderState());
+  }
 
   double rangStart = 800;
   double rangEnd = 1500;

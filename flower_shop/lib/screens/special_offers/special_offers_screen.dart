@@ -1,39 +1,13 @@
+import 'package:flower_shop/screens/home_screen/models/flower_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../resources/color_manager.dart';
-import 'special_offers.dart';
 
 class SpecialOffersScreen extends StatelessWidget {
   const SpecialOffersScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List specialoffers = [
-      const SpecialOffers(
-        dis: '30',
-        title: 'Special Deal\nFor October!',
-        image: 'assets/images/sp1.png',
-        color: Colors.green,
-      ),
-      const SpecialOffers(
-        dis: '50',
-        title: 'Special Deal\nFor October!',
-        image: 'assets/images/sp2.png',
-        color: Colors.amber,
-      ),
-      const SpecialOffers(
-        dis: '25',
-        title: 'Special Deal\nFor October!',
-        image: 'assets/images/sp3.png',
-        color: Colors.blueGrey,
-      ),
-      const SpecialOffers(
-        dis: '25',
-        title: 'Special Deal\nFor October!',
-        image: 'assets/images/sp4.png',
-        color: Colors.red,
-      ),
-    ];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: ColorManager.lightGrey,
@@ -83,11 +57,11 @@ class SpecialOffersScreen extends StatelessWidget {
       ),
       body: ListView.builder(
         physics: const BouncingScrollPhysics(),
-        itemCount: specialoffers.length,
+        itemCount: FlowerModel.offers.length,
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.all(10),
-            child: specialoffers[index],
+            child: FlowerModel.offers[index],
           );
         },
       ),

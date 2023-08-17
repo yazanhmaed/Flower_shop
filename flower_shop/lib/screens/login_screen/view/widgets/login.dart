@@ -6,7 +6,6 @@ import '../../../../resources/color_manager.dart';
 import '../../../../resources/styles_manager.dart';
 import '../../../../resources/widgets/input_text.dart';
 
-
 class LoginBuilder extends StatelessWidget {
   const LoginBuilder({
     Key? key,
@@ -44,6 +43,7 @@ class LoginBuilder extends StatelessWidget {
                 margin:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 decoration: BoxDecoration(
+                  
                     color: ColorManager.white.withOpacity(0.5),
                     borderRadius: BorderRadius.circular(20)),
                 child: Column(
@@ -59,7 +59,6 @@ class LoginBuilder extends StatelessWidget {
                       labelText: 'Email',
                       checkEmail: false,
                     ),
-             
                     InputText(
                       checkEmail: true,
                       type: TextInputType.visiblePassword,
@@ -130,7 +129,7 @@ class LoginBuilder extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(16.0),
                             child: Image.asset(
-                              'assets/images/google.png',
+                              'assets/images/facebool_logo.png',
                             ),
                           ),
                         ),
@@ -143,7 +142,7 @@ class LoginBuilder extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(16.0),
                             child: Image.asset(
-                              'assets/images/google.png',
+                              'assets/images/x_logo.png',
                             ),
                           ),
                         ),
@@ -162,12 +161,15 @@ class LoginBuilder extends StatelessWidget {
                             fontSize: 12,
                           ),
                         ),
-                        Text('Register now',
-                            style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                decorationColor: ColorManager.primary,
-                                color: ColorManager.primary,
-                                fontSize: 14)),
+                        GestureDetector(
+                          onTap: onTap,
+                          child: Text('Register now',
+                              style: TextStyle(
+                                  decoration: TextDecoration.underline,
+                                  decorationColor: ColorManager.primary,
+                                  color: ColorManager.primary,
+                                  fontSize: 14)),
+                        ),
                       ],
                     ),
                     const SizedBox(
@@ -179,7 +181,7 @@ class LoginBuilder extends StatelessWidget {
                       child: ButtomCustom(
                         text: 'Login',
                         color: ColorManager.primary,
-                        onPressed:onPressed,
+                        onPressed: onPressed,
                       ),
                     )
                   ],

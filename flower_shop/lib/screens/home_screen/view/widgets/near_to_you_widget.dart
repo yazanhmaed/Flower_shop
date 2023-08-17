@@ -6,16 +6,15 @@ import 'home_item.dart';
 
 class NearToYouWidget extends StatelessWidget {
   const NearToYouWidget({
-    super.key, required this.cubit,
+    super.key,
+    required this.cubit,
   });
- final HomeCubit cubit;
+  final HomeCubit cubit;
   @override
   Widget build(BuildContext context) {
-    
     return ListView.separated(
-      separatorBuilder: (context, index) =>
-          const SizedBox(
-        width: 30,
+      separatorBuilder: (context, index) => const SizedBox(
+        width: 10,
       ),
       physics: const BouncingScrollPhysics(),
       scrollDirection: Axis.horizontal,
@@ -25,7 +24,7 @@ class NearToYouWidget extends StatelessWidget {
         title: FlowerModel.nearToYou[index].title,
         price: FlowerModel.nearToYou[index].price,
         onPressed: () {
-            cubit.cartList(
+          cubit.cartList(
             FlowerModel.nearToYou,
             index,
           );

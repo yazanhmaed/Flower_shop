@@ -45,6 +45,7 @@ dependencies:
   dotted_border: ^2.0.0+3
   flutter_slidable: ^3.0.0
   another_stepper: ^1.2.2
+  carousel_slider: ^4.2.1
 
 
 

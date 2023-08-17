@@ -21,11 +21,13 @@ class ContainerWidget extends StatelessWidget {
     return Center(
       child: Container(
         margin: const EdgeInsets.only(top: 265),
-        height: 550,
+        height: 560,
         width: 365,
+        padding: const EdgeInsets.all(5),
         alignment: Alignment.bottomCenter,
         decoration: BoxDecoration(
             color: ColorManager.white,
+            border: Border.all(color: Colors.black54),
             borderRadius: BorderRadius.circular(20)),
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
@@ -36,26 +38,23 @@ class ContainerWidget extends StatelessWidget {
               cubit.positive == 0
                   ? LoginBuilder(
                       positive: cubit.positive,
-                      onTap: () => {},
+                      onTap: () => cubit.changecurrentSwitch(posit: 1),
                       obscureText: cubit.obscureText,
-                      onPressedobscureText: () =>
-                          cubit.changeobscureText(),
+                      onPressedobscureText: () => cubit.changeobscureText(),
                       emailController: cubit.emailController,
-                      passwordController:
-                          cubit.passwordController,
-                      onPressed: () => navigateAndFinish(
-                          context, const HomeLayoutScreen()),
+                      passwordController: cubit.passwordController,
+                      onPressed: () =>
+                          navigateAndFinish(context, const HomeLayoutScreen()),
                     )
                   : SignUpBuilder(
                       positive: cubit.positive,
                       obscureText: cubit.obscureText,
-                      onPressedobscureText: () =>
-                          cubit.changeobscureText(),
+                      onPressedobscureText: () => cubit.changeobscureText(),
                       nameController: cubit.nameController,
                       emailController: cubit.emailController,
-                      passwordController:
-                          cubit.passwordController,
-                      onPressed: () {}),
+                      passwordController: cubit.passwordController,
+                      onTap: () => cubit.changecurrentSwitch(posit: 0),
+                      onPressed: () => cubit.changecurrentSwitch(posit: 0)),
             ],
           ),
         ),
@@ -63,5 +62,3 @@ class ContainerWidget extends StatelessWidget {
     );
   }
 }
-
-

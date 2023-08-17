@@ -1,3 +1,7 @@
+import 'package:flutter/material.dart';
+
+import '../../special_offers/special_offers.dart';
+
 class FlowerModel {
   final int plantId;
   int price;
@@ -318,6 +322,24 @@ class FlowerModel {
       isFavorated: false,
       count: 1,
     ),
+    FlowerModel(
+      plantId: 6,
+      price: 17,
+      title: 'Chrysanthemum 6',
+      type: 'Flower Chrysanthemum',
+      image: 'assets/images/Chrysanthemum/6.png',
+      isFavorated: false,
+      count: 1,
+    ),
+    FlowerModel(
+      plantId: 3,
+      price: 22,
+      title: 'Chrysanthemum 3',
+      type: 'Flower Chrysanthemum',
+      image: 'assets/images/Chrysanthemum/3.png',
+      isFavorated: false,
+      count: 1,
+    ),
   ];
 
   static List<FlowerModel> nearToYou = [
@@ -348,5 +370,49 @@ class FlowerModel {
       isFavorated: false,
       count: 1,
     ),
+     FlowerModel(
+      plantId: 6,
+      price: 17,
+      title: 'Chrysanthemum 6',
+      type: 'Flower Chrysanthemum',
+      image: 'assets/images/Chrysanthemum/6.png',
+      isFavorated: false,
+      count: 1,
+    ),
+    FlowerModel(
+      plantId: 3,
+      price: 22,
+      title: 'Chrysanthemum 3',
+      type: 'Flower Chrysanthemum',
+      image: 'assets/images/Chrysanthemum/3.png',
+      isFavorated: false,
+      count: 1,
+    ),
   ];
+ static List offers = [
+      const SpecialOffers(
+        dis: '30',
+        title: 'Special Deal\nFor October!',
+        image: 'assets/images/sp1.png',
+        color: Colors.green,
+      ),
+      const SpecialOffers(
+        dis: '50',
+        title: 'Special Deal\nFor October!',
+        image: 'assets/images/sp2.png',
+        color: Colors.amber,
+      ),
+      const SpecialOffers(
+        dis: '25',
+        title: 'Special Deal\nFor October!',
+        image: 'assets/images/sp3.png',
+        color: Colors.blueGrey,
+      ),
+      const SpecialOffers(
+        dis: '25',
+        title: 'Special Deal\nFor October!',
+        image: 'assets/images/sp4.png',
+        color: Colors.red,
+      ),
+    ];
 }

@@ -43,12 +43,9 @@ class HomeWidget extends StatelessWidget {
                 ))
           ],
         ),
-        const SizedBox(
-          height: 150,
-          child: SliderOffersWidget(),
-        ),
-        const SizedBox(
-          height: 9,
+        SizedBox(
+          height: 230,
+          child: SliderOffersWidget(cubit: cubit),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

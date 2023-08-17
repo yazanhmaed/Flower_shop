@@ -14,6 +14,7 @@ class HomeErrorState extends HomeStates {}
 class HomeChangeState extends HomeStates {}
 class HomeChangeBoolState extends HomeStates {}
 class HomeChangeSliderState extends HomeStates {}
+class HomeChangeimageSliderState extends HomeStates {}
 class HomeChangeRangeState extends HomeStates {}
 class HomeFavState extends HomeStates {}
 class HomeCartState extends HomeStates {}
