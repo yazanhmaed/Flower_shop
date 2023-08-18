@@ -9,9 +9,9 @@ Welcome to Flower Shop, your ultimate flower shop app designed to make your flor
 
 <h1>OnBoarding Screens</h1>
 <p>
-  <img src="https://github.com/yazanhmaed/Flower_shop/assets/93092669/32aa4d3b-fd24-4e2f-8572-a184c8c1e9f3" style="height:600px;"/>
-  <img src="https://github.com/yazanhmaed/Flower_shop/assets/93092669/17b76244-e3aa-4eb0-b259-f3deba5790ba" style="height:600px;"/>
-  <img src="https://github.com/yazanhmaed/Flower_shop/assets/93092669/e4135858-e35c-401b-81c2-c5ca04451e26" style="height:600px;"/>
+  <img src="https://github.com/yazanhmaed/Flower_shop/assets/93092669/32aa4d3b-fd24-4e2f-8572-a184c8c1e9f3" style="height:400px;"/>
+  <img src="https://github.com/yazanhmaed/Flower_shop/assets/93092669/17b76244-e3aa-4eb0-b259-f3deba5790ba" style="height:400px;"/>
+  <img src="https://github.com/yazanhmaed/Flower_shop/assets/93092669/e4135858-e35c-401b-81c2-c5ca04451e26" style="height:400px;"/>
 </p>
 
 <h1>Login Screen</h1>
