@@ -19,7 +19,7 @@ class CatItemBuild extends StatelessWidget {
     var size = MediaQuery.of(context).size;
 
     /*24 is for notification bar on Android*/
-    final double itemHeight = (size.height - kToolbarHeight - 35) / 2;
+    final double itemHeight = (size.height - kToolbarHeight - 100) / 2;
     final double itemWidth = size.width / 2;
     return Column(
       children: [
@@ -89,9 +89,6 @@ class CatItemBuild extends StatelessWidget {
                                     : Colors.black,
                               ))
                         ],
-                      ),
-                      const SizedBox(
-                        height: 4,
                       ),
                       Text(list[index].title,
                           style: TextStyle(

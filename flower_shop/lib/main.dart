@@ -11,11 +11,13 @@ import 'package:flower_shop/screens/my_cart/controller/cubit.dart';
 import 'package:flower_shop/screens/on_boarding/view/screens/on_boarding_screen.dart';
 import 'package:flower_shop/screens/splash_screen/splashscreen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await CacheHelper.init();
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
 
   bool? onBording = CacheHelper.getData(key: 'onBoarding');
   Widget widget;
